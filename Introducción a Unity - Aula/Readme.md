@@ -1,4 +1,4 @@
-# Introducción a los scripts en Unity
+# Introducción a Unity - Aula
 *Tomás González Martín*  
 alu100913033@ull.edu.es
 ## Funcionamiento
