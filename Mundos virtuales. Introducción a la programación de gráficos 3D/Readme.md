@@ -7,7 +7,7 @@ Con el uso de localScale de transform
 ```
 transform.localScale += new Vector3(2, 2, 2);
 ```
-### **3. Cómo situarías un objeto en la posición (3,5,1.)**  
+### **3. Cómo situarías un objeto en la posición (3,5,1).**  
 Redefiniendo la posición:
 ```
 transform.position = new Vector3(3, 5, 1);
@@ -20,7 +20,7 @@ transform.Translate(Vector3.one * 3 * Time.deltaTime);
 ```
 Luego, con respecto a la rotación sobre el eje Y:  
 ```
-transform.Rotate(0, 30, 0, Space.Self);
+transform.Rotate(0, 30, 0, Space.Self);´´
 ```
 
 ### **5 Como rotarías un objeto sobre el eje (1,1,1)**
@@ -66,3 +66,10 @@ MatrixDeProyeccion = cam.projectionMatrix;
 ```
 
 ### **12. ¿Cómo puede obtener la matriz de transformación entre el sistema de coordenadas local y el mundial?**
+```
+Matrix4x4 matrizBuscada = tr.localToWorldMatrix;
+```
+
+### **13. ¿Cómo puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?:**
+**Position(3, 1, 1), Rotation(45, 0, 45)**
+
