@@ -5,41 +5,39 @@ using UnityEngine;
 public class SpecialCharacterController : ColorCylinderIndicator
 {
 
-    public float moveSpeed;
-    public float rotationSpeed;
-    private Transform tr;
-    
+    public float thrust;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 20;
-        rotationSpeed = 100;
-        tr = GetComponent<Transform>();
-
-        tr.Translate(Vector3.one * 3 * Time.deltaTime);
-        tr.Rotate(0, 30, 0, Space.Self);
+        thrust = 20;
+        rb = GetComponent<Rigidbody>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
+    }
+
+    void FixedUpdate(){
         // Por algún motivo falla con el pad
 
         // Desplazamiento del cubo utilizando iljm
         if (Input.GetKey(KeyCode.I))
-            tr.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            rb.AddForce(transform.forward * thrust);
         
         if(Input.GetKey(KeyCode.M))
-            tr.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
+            rb.AddForce(-transform.forward * thrust);
         
         if(Input.GetKey(KeyCode.J))
-            tr.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            rb.AddForce(-transform.right * thrust);
             
         if(Input.GetKey(KeyCode.L))
-            tr.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-
+            rb.AddForce(transform.right * thrust);
 
     }
 }
