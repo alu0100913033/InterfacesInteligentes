@@ -2,6 +2,7 @@
 Autores:
  * Tomás González Martín
  * Alberto Delgado Soler
+ * Felipe Andrés Álvarez Avaria
 
 ## Nombre del videojuego: *It's a bell*
 
